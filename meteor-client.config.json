@@ -1,0 +1,11 @@
+{
+  "import": [
+    "meteor-base",
+    "mongo",
+    "reactive-var",
+    "tracker",
+    "es5-shim",
+    "autopublish",
+    "insecure"
+  ]
+}

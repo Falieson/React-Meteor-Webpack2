@@ -1,12 +1,12 @@
 {
-  "name": "angular2-meteor-base",
-  "private": true,
+  "name": "angular-meteor-webpack",
   "scripts": {
     "start": "npm run meteor.run | npm run webpack.dev",
     "meteor.reset": "cd meteor && meteor reset",
     "meteor.run": "cd meteor && meteor run",
     "webpack.dev": "webpack-dev-server",
-    "postinstall": "meteor-client bundle"
+    "metoer.client-bundle": "meteor-client bundle",
+    "postinstall": "npm run meteor.client-bundle"
   },
   "devDependencies": {
     "@types/chai": "3.4.34",

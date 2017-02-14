@@ -11,12 +11,6 @@ After downloading:
 
 `npm install`
 
-Add the following line to in the `/* Imports for global scope */` section of `node_modules\meteor-client.js`:
-```
-Mongo = Package.mongo.Mongo;
-```
-(See History section to understand this work-around.)
-
 To launch:
 
 `npm run start`
@@ -29,6 +23,7 @@ Open a browser to [http://localhost:8080/](http://localhost:8080/)
 - `> npm run meteor.reset` - Resets Meteor's cache and clears the MongoDB collections.
 - `> npm run meteor.run` Runs only the Meteor server
 - `> npm run webpack.dev` Runs only the Angular-Meteor client via `webpack-dev-server`
+- `> npm run meteor.client-bundle` Runs `meteor-client-bundler`, needed when new client Atmosphere packages added`
 
 ## History
 How this project was made:
@@ -46,9 +41,25 @@ mklink /d meteor\both both
 mklink /d meteor\node_modules node_modules
 mklink meteor\typings.d.ts typings.d.ts
 mklink meteor\package.json package.json
+```
+* Added `meteor-client.config.json`:
+```json
+{
+  "import": [
+    "meteor-base",
+    "mongo",
+    "reactive-var",
+    "tracker",
+    "es5-shim",
+    "autopublish",
+    "insecure"
+  ]
+}
+```
+* Bundled Atmosphere packages for loading via Webpack:
+```dos
 meteor-client bundle
 ```
-* Manually added `Mongo = Package.meteor.Mongo;` to `/* Imports for global scope */` section of `node_modules\meteor-client.js` to [work around Meteor-Client-Bundler glitch](https://github.com/Urigo/meteor-client-bundler/issues/5).
 * Modified `client\main.ts` adding `import 'meteor-client';` to add bundled Meteor Atmosphere packages
 * Modified `tsconfig.json` adding `"meteor/**/*"` to `exclude` array
 * Hacked together `webpack.config.js` based on
