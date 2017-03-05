@@ -1,0 +1,20 @@
+{
+  "CLUSTER_WORKERS_COUNT": "auto",
+  "galaxy.meteor.com": {
+    "env": {
+      "ROOT_URL": "",
+      "MONGO_URL": ""
+    }
+  },
+  "kadira": {
+    "appId": "",
+    "appSecret": ""
+  },
+  "public": {
+    "analyticsSettings": {
+      "Google Analytics": {
+        "trackingId": ""
+      }
+    }
+  }
+}

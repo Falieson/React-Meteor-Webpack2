@@ -1,4 +1,9 @@
-# Angular-Meteor-Webpack
+# React-Meteor-Webpack2
+
+This is a fork of [Angular-Meteor-Webpack](https://github.com/KeithGillette/Angular-Meteor-Webpack).
+
+
+# FORKED: Angular-Meteor-Webpack
 
 A quick & dirty sample project demonstrating use of Webpack2 as the client bundler on an [Angular-Meteor](https://angular-meteor.com/) project, specifically the [Angular2-Meteor Boilerplate](https://github.com/Urigo/angular2-meteor-base), using [Meteor Client Bundler](https://github.com/Urigo/meteor-client-bundler) to bundle Meteor Atmosphere packages for use outside of Meteor Isobuild. For demonstration purposes only.
 

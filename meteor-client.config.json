@@ -4,8 +4,6 @@
     "mongo",
     "reactive-var",
     "tracker",
-    "es5-shim",
-    "autopublish",
-    "insecure"
+    "es5-shim"
   ]
 }
